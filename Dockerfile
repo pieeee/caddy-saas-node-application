@@ -16,7 +16,6 @@ RUN pnpm install --frozen-lockfile
 # Bundle app source inside Docker image
 COPY . .
 
-RUN pnpm run build
 
 EXPOSE 8080
 
