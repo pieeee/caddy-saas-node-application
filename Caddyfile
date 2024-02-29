@@ -1,0 +1,17 @@
+{
+    on_demand_tls {
+        ask http://app:8080/tls-check
+        burst 5
+        interval 2m
+    }
+}
+
+https:// {
+    tls {
+        on_demand
+    }
+
+    reverse_proxy {
+        to app:8080
+    }
+}
