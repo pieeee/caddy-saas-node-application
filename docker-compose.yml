@@ -4,6 +4,8 @@ services:
         build: .
         networks:
             - webnet
+        ports:
+          - 8080:8080
     caddy:
         image: caddy:2
         ports:
